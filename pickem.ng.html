@@ -1,0 +1,39 @@
+<div class="container">
+
+	<meteor-include src="loginButtons"></meteor-include>
+
+	<ul>
+		<li>
+			Chelsea vs. Swansea
+			<form class="new-pick" 
+				ng-submit="addPick(newPick); newPick='';"
+				ng-show="$root.currentUser">
+				<input ng-model="newPick" type="text"
+					name="text" placeholder="Type to add your pick" />
+			</form>
+			<b ng-repeat="pick in picks" style="display: block;">
+				<button class="delete" ng-click="picks.remove(pick)">&times;</button>
+				{{pick.username}}: {{pick.text}}
+			</b>
+		</li>
+	</ul>
+
+	<ul>
+		<li>
+			United vs. Tottenham
+			<form class="new-pick" 
+				ng-submit="addPick2(newPick2); newPick2='';"
+				ng-show="$root.currentUser">
+				<input ng-model="newPick2" type="text"
+					name="text" placeholder="Type to add your pick" />
+			</form>
+			<b ng-repeat="pick in picks" style="display: block;">
+				<button class="delete" ng-click="picks.remove(pick)">&times;</button>
+				{{pick.username}}: {{pick.text}}
+			</b>
+		</li>
+	</ul>
+
+
+
+</div>
