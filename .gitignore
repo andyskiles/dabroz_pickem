@@ -1,1 +1,4 @@
 .meteor
+node_modules/
+.DS_Store
+.development/.sass-cache
