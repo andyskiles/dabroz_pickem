@@ -23,15 +23,15 @@ gulp.task('styles', function() {
 
 
 
-// Scripts
-gulp.task('scripts', function() {
-  return gulp.src('js/main.js')
-    .pipe(concat('main.js'))
-    .pipe(jshint())
-    .pipe(jshint.reporter('jshint-stylish'))
-    .pipe(rename('other.js'))
-    .pipe(gulp.dest('../'));
-});
+// // Scripts
+// gulp.task('scripts', function() {
+//   return gulp.src('js/main.js')
+//     .pipe(concat('main.js'))
+//     .pipe(jshint())
+//     .pipe(jshint.reporter('jshint-stylish'))
+//     .pipe(rename('other.js'))
+//     .pipe(gulp.dest('../'));
+// });
  
 
 
@@ -41,11 +41,11 @@ gulp.task('watch', function () {
     // Watch .scss files
     gulp.watch('scss/**/*.scss', ['styles']);
     // Watch .js files
-    gulp.watch('js/main.js', ['scripts']);
+    // gulp.watch('js/main.js', ['scripts']);
 })
  
  
 
 
 // Run gulp in terminal to start all of the following processes
-gulp.task('default', ['styles', 'scripts', 'watch']);
+gulp.task('default', ['styles', 'watch']);
