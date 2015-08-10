@@ -17,7 +17,7 @@ gulp.task('styles', function() {
     style: "compressed"
   })
     .pipe(postcss([ autoprefixer({ browsers: ['last 2 version'] }) ]))
-    .pipe(gulp.dest('../'));
+    .pipe(gulp.dest('../client/css'));
 });
 
 
