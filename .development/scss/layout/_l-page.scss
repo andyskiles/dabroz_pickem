@@ -3,3 +3,11 @@
 Layout-Page
 ========================
 */
+
+.site-container {
+	@include container(95%);
+
+	@include bp(l) {
+		@include container(60%);
+	}
+}

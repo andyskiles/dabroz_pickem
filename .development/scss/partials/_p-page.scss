@@ -4,6 +4,66 @@ Partials-Page
 ========================
 */
 
-body {
-	background: #FFF;
+.page-title {
+	text-align: center;
+	text-transform: uppercase;
 }
+
+
+
+
+
+/*
+========================
+Matchups
+========================
+*/
+
+// the individual matchup
+.matchup {
+	text-align: center;
+}
+
+// the date
+.matchup-details {}
+
+// the matchup teams container
+.matchup-teams {
+	display: flex;
+	align-items: center;
+}
+
+// the teamname
+.matchup-team-name {}
+
+// matchup team 1
+.matchup-team-1 {
+	flex-grow: 1;
+}
+
+// matchup team 2
+.matchup-team-2 {
+	flex-grow: 1;
+}
+
+// container for choosing matchup pick
+.matchup-input {}
+
+// container for the matchup user picks
+.matchup-user-picks {
+
+	ul {}
+
+}
+
+// li for user pick
+.matchup-user-pick {}
+
+// delete button
+.matchup-delete-pick {}
+
+// who picked the team
+.matchup-user-name {}
+
+// who the user picked
+.matchup-user-selection {}

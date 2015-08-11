@@ -4,6 +4,10 @@ Base-Typography
 ========================
 */
 
+h1, h2, h3, h4, h5 {
+	font-family: "LeanOSans-Bold";
+}
+
 h1 {
 	font-size: 2em;
 }
@@ -69,4 +73,14 @@ li {
 
 a {
   text-decoration: none;
+}
+
+
+
+
+input {
+	font-family: inherit;
+	font-size: 1em;
+	padding: 5px 8px;
+	margin-top: .5em;
 }
