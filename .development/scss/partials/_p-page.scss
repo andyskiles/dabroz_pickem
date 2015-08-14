@@ -31,6 +31,10 @@ Matchups
 .matchup-teams {
 	display: flex;
 	align-items: center;
+
+	p {
+		flex-grow: 1;
+	}
 }
 
 // the teamname
@@ -63,7 +67,9 @@ Matchups
 .matchup-delete-pick {}
 
 // who picked the team
-.matchup-user-name {}
+.matchup-user-name {
+	font-weight: bold;
+}
 
 // who the user picked
 .matchup-user-selection {}

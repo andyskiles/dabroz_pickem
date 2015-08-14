@@ -1,22 +1,34 @@
-<h1>Matchday 2</h1>
+<h1 class="page-title">Matchday 2</h1>
 
-<img src="images/logos/arsenal.png" class="team-logo">
-<img src="images/logos/aston-villa.png" class="team-logo">
-<img src="images/logos/bournermouth.png" class="team-logo">
-<img src="images/logos/chelsea.png" class="team-logo">
-<img src="images/logos/crystal-palace.png" class="team-logo">
-<img src="images/logos/everton.png" class="team-logo">
-<img src="images/logos/leicester-city.png" class="team-logo">
-<img src="images/logos/liverpool.png" class="team-logo">
-<img src="images/logos/manchester-city.png" class="team-logo">
-<img src="images/logos/manchester-united.png" class="team-logo">
-<img src="images/logos/newcastle-united.png" class="team-logo">
-<img src="images/logos/norwich-city.png" class="team-logo">
-<img src="images/logos/southampton.png" class="team-logo">
-<img src="images/logos/stoke-city.png" class="team-logo">
-<img src="images/logos/sunderland.png" class="team-logo">
-<img src="images/logos/swansea-city.png" class="team-logo">
-<img src="images/logos/tottenham.png" class="team-logo">
-<img src="images/logos/watford.png" class="team-logo">
-<img src="images/logos/west-brom.png" class="team-logo">
-<img src="images/logos/west-ham.png" class="team-logo">
+<div class="matchup">
+	<div class="matchup-details">
+		<small>14 August 2015 | 02:45<br>Villa Park</small>
+	</div>
+	<div class="matchup-teams">
+		<div class="matchup-team-1">
+			<img src="images/logos/aston-villa.png" class="matchup-team-logo">
+			<h2 class="matchup-team-name">Aston Villa</h2>
+		</div>
+		<p>vs.</p>
+		<div class="matchup-team-2">
+			<img src="images/logos/manchester-united.png" class="matchup-team-logo">
+			<h2 class="matchup-team-name">Manchester United</h2>
+		</div>
+	</div>
+	<div class="matchup-input">
+		<form class="new-pick" 
+			ng-submit="addPick20(newPick20); newPick20='';"
+			ng-show="$root.currentUser">
+			<input ng-model="newPick20" type="text" name="text" placeholder="Type to add your pick"/>
+		</form>
+	</div>
+	<div class="matchup-user-picks">
+		<ul>
+			<li ng-repeat="pick in picks | filter: {id: 2.0}" class="matchup-user-pick">
+				<button class="matchup-delete-pick" ng-click="picks.remove(pick)" ng-show="$root.currentUser">&times;</button>
+				<span class="matchup-user-name">{{pick.username}}:</span>
+				<span class="matchup-user-selection">{{pick.text}}</span>
+			</li>
+		</ul>
+	</div>
+</div>

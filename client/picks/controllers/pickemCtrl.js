@@ -1,6 +1,12 @@
 angular.module('pickem')
-  .controller('PickemCtrl', ['$scope', '$meteor',
-    function ($scope, $meteor) {
+  .controller('PickemCtrl', ['$scope', '$meteor','$http',
+    function ($scope, $meteor, $http) {
+
+      $http.get('client/lib/fixtures.json').success(function(data) {
+        console.log(data[0].players);
+        $scope.players = data[0].players;
+        
+      }); 
 
       $scope.picks = $meteor.collection(function() {
         return Picks.find($scope.getReactively('query'), {sort: {createdAt: -1}})
@@ -108,6 +114,16 @@ angular.module('pickem')
           text: newPick,
           createdAt: new Date(),
           id: 9,
+          owner: Meteor.userId(),
+          username: Meteor.user().username }
+        );
+      };
+
+      $scope.addPick20 = function(newPick) {
+        $scope.picks.push( {
+          text: newPick,
+          createdAt: new Date(),
+          id: 2.0,
           owner: Meteor.userId(),
           username: Meteor.user().username }
         );

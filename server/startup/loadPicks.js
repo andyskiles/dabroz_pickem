@@ -1,1 +1,3 @@
-// if Server code
+Meteor.startup(function() {
+  console.log('dabrozzzzz');
+});
