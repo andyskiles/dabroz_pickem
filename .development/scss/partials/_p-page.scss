@@ -6,6 +6,7 @@ Partials-Page
 
 body {
 	padding-bottom: 80px;
+	background: lighten(#000, 96%);
 }
 
 .page-title {
@@ -27,7 +28,10 @@ Matchups
 .matchup {
 	text-align: center;
 	padding: 2em 0;
+	margin-bottom: 1.5em;
 	border-bottom: 2px solid lighten(#000, 98%);
+	background: lighten(#000, 99%);
+	border-radius: 5px;
 }
 
 // the date
@@ -37,6 +41,7 @@ Matchups
 .matchup-teams {
 	display: flex;
 	align-items: center;
+	margin-bottom: 1em;
 }
 
 .matchup-teams p,
@@ -51,11 +56,18 @@ Matchups
 // matchup team 1
 .matchup-team-1 {
 	flex-grow: 1;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
 }
 
 // matchup team 2
 .matchup-team-2 {
 	flex-grow: 1;
+	flex-grow: 1;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
 }
 
 // container for choosing matchup pick
@@ -89,3 +101,33 @@ Matchups
 
 // who the user picked
 .matchup-user-selection {}
+
+.team-form {
+	text-align: center;
+}
+
+.form-icon {
+}
+
+.form-win {
+    background-position: 0 -32px !important;
+}
+
+.form-loss {
+    background-position: 0 -16px !important;
+}
+
+.form-draw {
+    background-position: 0 0 !important;
+}
+
+.form-icon {
+    width: 16px;
+    height: 15px;
+    float: left;
+    background: url("../images/form-icons.png") no-repeat 50% 50%;
+    margin-right: 2px;
+    text-indent: -5000px;
+    opacity: 0.5;
+    filter: alpha(opacity = 50);
+}
