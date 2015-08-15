@@ -4,6 +4,10 @@ Partials-Page
 ========================
 */
 
+body {
+	padding-bottom: 80px;
+}
+
 .page-title {
 	text-align: center;
 	text-transform: uppercase;
@@ -22,6 +26,8 @@ Matchups
 // the individual matchup
 .matchup {
 	text-align: center;
+	padding: 2em 0;
+	border-bottom: 2px solid lighten(#000, 98%);
 }
 
 // the date
@@ -31,10 +37,12 @@ Matchups
 .matchup-teams {
 	display: flex;
 	align-items: center;
+}
 
-	p {
-		flex-grow: 1;
-	}
+.matchup-teams p,
+.matchup-team-1,
+.matchup-team-2 {
+	width: 33%;
 }
 
 // the teamname
@@ -51,7 +59,13 @@ Matchups
 }
 
 // container for choosing matchup pick
-.matchup-input {}
+.matchup-input {
+
+	input {
+		width: 60%;
+		margin-bottom: 1em;
+	}
+}
 
 // container for the matchup user picks
 .matchup-user-picks {
@@ -61,7 +75,9 @@ Matchups
 }
 
 // li for user pick
-.matchup-user-pick {}
+.matchup-user-pick {
+	text-transform: capitalize;
+}
 
 // delete button
 .matchup-delete-pick {}
