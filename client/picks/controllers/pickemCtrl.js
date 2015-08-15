@@ -6,7 +6,7 @@ angular.module('pickem')
         console.log(data[0].players);
         $scope.players = data[0].players;
         
-      }); 
+      });
 
       $scope.picks = $meteor.collection(function() {
         return Picks.find($scope.getReactively('query'), {sort: {createdAt: -1}})
@@ -18,6 +18,27 @@ angular.module('pickem')
         else
           $scope.query = {};
       });
+
+      $scope.teams = ["AFC Bournemouth",
+                        "Arsenal",
+                        "Aston Villa",
+                        "Chelsea",
+                        "Crystal Palace",
+                        "Everton",
+                        "Leicester City",
+                        "Liverpool",
+                        "Manchester City",
+                        "Manchester United",
+                        "Newcastle United",
+                        "Noriwch City",
+                        "Southampton",
+                        "Stoke City",
+                        "Sunderland",
+                        "Swansea City",
+                        "Tottenham",
+                        "Watford",
+                        "West Brom",
+                        "West Ham"];
 
       $scope.addPick0 = function(newPick) {
         $scope.picks.push( {

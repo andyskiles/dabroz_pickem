@@ -1,3 +1,109 @@
 <h1>Matchday 3</h1>
 
-<h2>Coming Soon</h2>
+<div class="matchup">
+	<div class="matchup-details">
+		<div ng-controller="weatherCtrl" ng-init="afcBournemouthWeather()">
+			<div>
+			  <small>{{ place.location.city }}, England</small>
+			  <h2>Current: {{ place.item.condition.text }} | {{ place.item.condition.temp }}&deg; <img src="http://l.yimg.com/a/i/us/we/52/{{place.item.condition.code}}.gif"/></h2>
+			</div>
+		</div>
+
+		<small>14 August 2015 | 02:45<br>Villa Park</small>
+	</div>
+	<div class="matchup-teams">
+		<div class="matchup-team-1">
+			<img src="images/logos/aston-villa.png" class="matchup-team-logo">
+			<h2 class="matchup-team-name">Aston Villa</h2>
+			<div class="team-form">
+				<div class="form-icon form-win"></div>
+				<div class="form-icon form-draw"></div>
+				<div class="form-icon form-draw"></div>
+				<div class="form-icon form-draw"></div>
+			</div>
+		</div>
+		<p>vs.</p>
+		<div class="matchup-team-2">
+			<img src="images/logos/manchester-united.png" class="matchup-team-logo">
+			<h2 class="matchup-team-name">Manchester United</h2>
+			<div class="team-form">
+				<div class="form-icon form-win"></div>
+				<div class="form-icon form-loss"></div>
+				<div class="form-icon form-win"></div>
+				<div class="form-icon form-win"></div>
+			</div>
+		</div>
+	</div>
+	<div class="matchup-input">
+		<form class="new-pick" 
+			ng-submit="addPick10(newPick10); newPick10='';"
+			ng-show="$root.currentUser">
+    		<autocomplete ng-model="newPick10" data="teams" on-type="updatePicks"></autocomplete>
+		</form>
+	</div>
+	<div class="matchup-user-picks">
+		<ul>
+			<li ng-repeat="pick in picks | filter: {matchday2: 0}" class="matchup-user-pick">
+				<button class="matchup-delete-pick" ng-click="picks.remove(pick)" ng-show="$root.currentUser">&times;</button>
+				<span class="matchup-user-name">{{pick.username}}:</span>
+				<span class="matchup-user-selection">{{pick.text}}</span>
+			</li>
+		</ul>
+	</div>
+</div>
+
+
+
+
+<div class="matchup">
+	<div class="matchup-details">
+		<div ng-controller="weatherCtrl" ng-init="southamptonWeather()">
+			<div>
+			  <small>{{ place.location.city }}, England</small>
+			  <h2>Current: {{ place.item.condition.text }} | {{ place.item.condition.temp }}&deg; <img src="http://l.yimg.com/a/i/us/we/52/{{place.item.condition.code}}.gif"/></h2>
+			</div>
+		</div>
+		<small>15 August 2015 | 07:45<br>St. Mary's Stadium</small>
+	</div>
+	<div class="matchup-teams">
+		<div class="matchup-team-1">
+			<img src="images/logos/southampton.png" class="matchup-team-logo">
+			<h2 class="matchup-team-name">Southampton</h2>
+			<div class="team-form">
+				<div class="form-icon form-draw"></div>
+				<div class="form-icon form-win"></div>
+				<div class="form-icon form-draw"></div>
+				<div class="form-icon form-win"></div>
+				<div class="form-icon form-win"></div>
+			</div>
+		</div>
+		<p>vs.</p>
+		<div class="matchup-team-2">
+			<img src="images/logos/everton.png" class="matchup-team-logo">
+			<h2 class="matchup-team-name">Everton</h2>
+			<div class="team-form">
+				<div class="form-icon form-draw"></div>
+				<div class="form-icon form-loss"></div>
+				<div class="form-icon form-loss"></div>
+				<div class="form-icon form-win"></div>
+				<div class="form-icon form-win"></div>
+			</div>
+		</div>
+	</div>
+	<div class="matchup-input">
+		<form class="new-pick" 
+			ng-submit="addPick11(newPick11); newPick11='';"
+			ng-show="$root.currentUser">
+			<autocomplete ng-model="newPick11" data="teams" on-type="updatePicks"></autocomplete>
+		</form>
+	</div>
+	<div class="matchup-user-picks">
+		<ul>
+			<li ng-repeat="pick in picks | filter: {matchday2: 1}" class="matchup-user-pick">
+				<button class="matchup-delete-pick" ng-click="picks.remove(pick)" ng-show="$root.currentUser">&times;</button>
+				<span class="matchup-user-name">{{pick.username}}:</span>
+				<span class="matchup-user-selection">{{pick.text}}</span>
+			</li>
+		</ul>
+	</div>
+</div>
