@@ -44,7 +44,7 @@
 	<div class="matchup-user-picks">
 		<ul>
 			<li ng-repeat="pick in picks | filter: {matchday2: 0}" class="matchup-user-pick">
-				<button class="matchup-delete-pick" ng-click="picks.remove(pick)" ng-show="$root.currentUser">&times;</button>
+				<button class="matchup-delete-pick" ng-click="picks.remove(pick)" ng-show="pick.username==$root.currentUser.username">&times;</button>
 				<span class="matchup-user-name">{{pick.username}}:</span>
 				<span class="matchup-user-selection">{{pick.text}}</span>
 			</li>
