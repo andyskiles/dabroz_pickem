@@ -46,9 +46,14 @@ Matchups
 	img {
 		cursor: pointer;
 	}
+
+	p {
+		margin: 0 0 1.5em 0;
+		text-align: center;
+	}
 }
 
-.matchup-teams p,
+
 .matchup-team-1,
 .matchup-team-2 {
 	width: 33%;
@@ -133,4 +138,23 @@ Matchups
     text-indent: -5000px;
     opacity: 0.5;
     filter: alpha(opacity = 50);
+}
+
+.draw-button {
+	font-family: inherit;
+	-webkit-appearance: none;
+	border: 1px solid rgba(#000, 0.3);
+	padding: 3px 5px;
+	border-radius: 3px;
+	background: #fff;
+	cursor: pointer;
+	transition: all 0.2s ease-out;
+	margin: 0 auto;
+	display: block;
+	outline: none;
+
+	&:hover {
+		background: darken(#fff, 10%);
+		transition: all 0.2s ease-in;
+	}
 }
