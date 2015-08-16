@@ -42,6 +42,10 @@ Matchups
 	display: flex;
 	align-items: center;
 	margin-bottom: 1em;
+
+	img {
+		cursor: pointer;
+	}
 }
 
 .matchup-teams p,

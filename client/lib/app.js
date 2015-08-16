@@ -1,7 +1,6 @@
 angular.module('pickem', [
   'angular-meteor',
-  'ui.router',
-  'autocomplete'
+  'ui.router'
 ]);
 
 Accounts.ui.config({

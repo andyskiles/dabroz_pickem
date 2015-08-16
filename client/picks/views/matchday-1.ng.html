@@ -15,13 +15,6 @@
 			<h2 class="matchup-team-name">Tottenham Hotspur</h2>
 		</div>
 	</div>
-	<div class="matchup-input">
-		<form class="new-pick" 
-			ng-submit="addPick0(newPick0); newPick0='';"
-			ng-show="$root.currentUser">
-			<input ng-model="newPick0" type="text" name="text" placeholder="Type to add your pick"/>
-		</form>
-	</div>
 	<div class="matchup-user-picks">
 		<ul>
 			<li ng-repeat="pick in picks | filter: {id: 0}" class="matchup-user-pick">
@@ -37,12 +30,6 @@
 
 	<li>
 		AFC Bournermouth vs. Aston Villa | 10:00
-		<form class="new-pick" 
-			ng-submit="addPick1(newPick1); newPick1='';"
-			ng-show="$root.currentUser">
-			<input ng-model="newPick1" type="text"
-				name="text" placeholder="Type to add your pick" />
-		</form>
 		<b ng-repeat="pick in picks | filter: {id: 1}" style="display: block;">
 			<button class="delete" ng-click="picks.remove(pick)" ng-show="$root.currentUser">&times;</button>
 			{{pick.username}}: {{pick.text}}
@@ -51,12 +38,6 @@
 
 	<li>
 		Norwich City vs. Crystal Palace | 10:00
-		<form class="new-pick" 
-			ng-submit="addPick2(newPick2); newPick2='';"
-			ng-show="$root.currentUser">
-			<input ng-model="newPick2" type="text"
-				name="text" placeholder="Type to add your pick" />
-		</form>
 		<b ng-repeat="pick in picks | filter: {id: 2}" style="display: block;">
 			<button class="delete" ng-click="picks.remove(pick)" ng-show="$root.currentUser">&times;</button>
 			{{pick.username}}: {{pick.text}}
@@ -65,12 +46,6 @@
 
 	<li>
 		Leicester City vs. Sunderland | 10:00
-		<form class="new-pick" 
-			ng-submit="addPick3(newPick3); newPick3='';"
-			ng-show="$root.currentUser">
-			<input ng-model="newPick3" type="text"
-				name="text" placeholder="Type to add your pick" />
-		</form>
 		<b ng-repeat="pick in picks | filter: {id: 3}" style="display: block;">
 			<button class="delete" ng-click="picks.remove(pick)" ng-show="$root.currentUser">&times;</button>
 			{{pick.username}}: {{pick.text}}
@@ -79,12 +54,6 @@
 
 	<li>
 		Everton vs. Watford | 10:00
-		<form class="new-pick" 
-			ng-submit="addPick4(newPick4); newPick4='';"
-			ng-show="$root.currentUser">
-			<input ng-model="newPick4" type="text"
-				name="text" placeholder="Type to add your pick" />
-		</form>
 		<b ng-repeat="pick in picks | filter: {id: 4}" style="display: block;">
 			<button class="delete" ng-click="picks.remove(pick)" ng-show="$root.currentUser">&times;</button>
 			{{pick.username}}: {{pick.text}}
@@ -93,12 +62,6 @@
 
 	<li>
 		Chelsea vs. Swansea City | 12:30
-		<form class="new-pick" 
-			ng-submit="addPick5(newPick5); newPick5='';"
-			ng-show="$root.currentUser">
-			<input ng-model="newPick5" type="text"
-				name="text" placeholder="Type to add your pick" />
-		</form>
 		<b ng-repeat="pick in picks | filter: {id: 5}" style="display: block;">
 			<button class="delete" ng-click="picks.remove(pick)" ng-show="$root.currentUser">&times;</button>
 			{{pick.username}}: {{pick.text}}
@@ -111,12 +74,6 @@
 <ul>
 	<li>
 		Newcastle United vs. Southampton | 08:30
-		<form class="new-pick" 
-			ng-submit="addPick6(newPick6); newPick6='';"
-			ng-show="$root.currentUser">
-			<input ng-model="newPick6" type="text"
-				name="text" placeholder="Type to add your pick" />
-		</form>
 		<b ng-repeat="pick in picks | filter: {id: 6}" style="display: block;">
 			<button class="delete" ng-click="picks.remove(pick)" ng-show="$root.currentUser">&times;</button>
 			{{pick.username}}: {{pick.text}}
@@ -125,12 +82,6 @@
 
 	<li>
 		Arsenal vs. West Ham United | 08:30
-		<form class="new-pick" 
-			ng-submit="addPick7(newPick7); newPick7='';"
-			ng-show="$root.currentUser">
-			<input ng-model="newPick7" type="text"
-				name="text" placeholder="Type to add your pick" />
-		</form>
 		<b ng-repeat="pick in picks | filter: {id: 7}" style="display: block;">
 			<button class="delete" ng-click="picks.remove(pick)" ng-show="$root.currentUser">&times;</button>
 			{{pick.username}}: {{pick.text}}
@@ -139,12 +90,6 @@
 
 	<li>
 		Stoke City vs. Liverpool | 11:00
-		<form class="new-pick" 
-			ng-submit="addPick8(newPick8); newPick8='';"
-			ng-show="$root.currentUser">
-			<input ng-model="newPick8" type="text"
-				name="text" placeholder="Type to add your pick" />
-		</form>
 		<b ng-repeat="pick in picks | filter: {id: 8}" style="display: block;">
 			<button class="delete" ng-click="picks.remove(pick)" ng-show="$root.currentUser">&times;</button>
 			{{pick.username}}: {{pick.text}}
@@ -157,12 +102,6 @@
 <ul>
 	<li>
 		West Bromwich Albion vs. Manchester City | 15:00
-		<form class="new-pick" 
-			ng-submit="addPick9(newPick9); newPick9='';"
-			ng-show="$root.currentUser">
-			<input ng-model="newPick9" type="text"
-				name="text" placeholder="Type to add your pick" />
-		</form>
 		<b ng-repeat="pick in picks | filter: {id: 9}" style="display: block;">
 			<button class="delete" ng-click="picks.remove(pick)" ng-show="$root.currentUser">&times;</button>
 			{{pick.username}}: {{pick.text}}
