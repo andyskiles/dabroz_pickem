@@ -7,7 +7,3 @@ angular.module('pickem', [
 Accounts.ui.config({
   passwordSignupFields: "USERNAME_ONLY"
 });
-
-
-
-var usernameMeteor = Meteor.user().username;

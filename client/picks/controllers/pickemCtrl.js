@@ -2,12 +2,6 @@ angular.module('pickem')
   .controller('PickemCtrl', ['$scope', '$meteor','$http',
     function ($scope, $meteor, $http) {
 
-      $http.get('client/lib/fixtures.json').success(function(data) {
-        console.log(data[0].players);
-        $scope.players = data[0].players;
-        
-      });
-
       $scope.picks = $meteor.collection(function() {
         return Picks.find($scope.getReactively('query'), {sort: {createdAt: -1}})
       });
