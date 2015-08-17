@@ -1,0 +1,224 @@
+/*
+========================
+Modules-Matchup
+========================
+*/
+
+// the individual matchup
+.matchup {
+	margin-bottom: 1.5em;
+	border-bottom: 2px solid lighten(#000, 98%);
+	background: lighten(#000, 99%);
+	border-radius: 5px;
+	padding-bottom: .8em;
+}
+
+// the date
+.matchup-details {
+	display: flex;
+	align-items: center;
+	background: $green;
+	color: rgba(whitesmoke, 0.95);
+	padding: .5em .3em;
+	font-family: "LeanOSans-Bold";
+
+	div {
+		flex-grow: 1;
+	}
+
+	div:last-of-type {
+		text-align: right;
+	}
+}
+
+// the matchup teams container
+.matchup-teams {
+	display: flex;
+	align-items: center;
+	margin-bottom: 1em;
+	padding: 1.5em 0;
+
+	img {
+		cursor: pointer;
+	}
+
+	p {
+		margin: 0 0 1.5em 0;
+		text-align: center;
+	}
+}
+
+
+.matchup-team-1,
+.matchup-team-2 {
+	width: 33%;
+}
+
+// the teamname
+.matchup-team-name {}
+
+// matchup team 1
+.matchup-team-1 {
+	flex-grow: 1;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+// matchup team 2
+.matchup-team-2 {
+	flex-grow: 1;
+	flex-grow: 1;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+// container for the matchup user picks
+.matchup-user-picks {
+
+	ul {
+		width: 95%;
+		margin: 0 auto;
+		display: block;
+	}
+
+}
+
+.matchup-user-name {
+	text-transform: capitalize;
+}
+
+// li for user pick
+.matchup-user-pick {
+	text-transform: capitalize;
+	border-bottom: 1px dotted rgba(#000, 0.2);
+	padding: .2em 0;
+	line-height: 1.2em;
+	vertical-align: middle;
+
+	&:last-of-type {
+		border-bottom: 0;
+	}
+}
+
+// delete button
+.matchup-delete-pick {
+	float: right;
+	cursor: pointer;
+	font-size: .6em;
+	vertical-align: middle;
+	line-height: 1.2em;
+	position: relative;
+	top: 5px;
+	color: lighten(red, 20%);
+}
+
+// who picked the team
+.matchup-user-name {
+	font-weight: bold;
+}
+
+// who the user picked
+.matchup-user-selection {}
+
+.team-form {
+	text-align: center;
+}
+
+.form-icon {
+}
+
+.form-win {
+    background-position: 0 -32px !important;
+}
+
+.form-loss {
+    background-position: 0 -16px !important;
+}
+
+.form-draw {
+    background-position: 0 0 !important;
+}
+
+.form-icon {
+    width: 16px;
+    height: 15px;
+    float: left;
+    background: url("../images/form-icons.png") no-repeat 50% 50%;
+    margin-right: 2px;
+    text-indent: -5000px;
+    opacity: 0.5;
+    filter: alpha(opacity = 50);
+}
+
+.draw-button {
+	font-family: inherit;
+	-webkit-appearance: none;
+	border: 1px solid rgba(#000, 0.3);
+	padding: 3px 5px;
+	border-radius: 3px;
+	background: #fff;
+	cursor: pointer;
+	transition: all 0.2s ease-out;
+	margin: 0 auto;
+	display: block;
+	outline: none;
+
+	&:hover {
+		background: darken(#fff, 10%);
+		transition: all 0.2s ease-in;
+	}
+}
+
+
+
+
+
+/*
+========================
+Team Style
+========================
+*/
+
+.bournemouth {}
+
+.arsenal {}
+
+.astonvilla {}
+
+.chelsea {}
+
+.crystalpalace {}
+
+.everton {}
+
+.leicester {}
+
+.liverpool {}
+
+.mancity {}
+
+.manunited {
+}
+
+.newcastle {
+}
+
+.norwich {}
+
+.soton {}
+
+.stoke {}
+
+.sunderland {}
+
+.swansea {}
+
+.spurs {}
+
+.watford {}
+
+.westbrom {}
+
+.westham {}

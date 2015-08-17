@@ -13,7 +13,7 @@ var gulp = require('gulp'),
 gulp.task('styles', function() {
   return sass('scss/main.scss', {
     // we use susy, feel free to remove this
-    require: "susy",
+    require: ["susy", "bourbon"],
     style: "compressed"
   })
     .pipe(postcss([ autoprefixer({ browsers: ['last 2 version'] }) ]))

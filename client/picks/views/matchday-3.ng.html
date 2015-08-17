@@ -2,17 +2,16 @@
 
 <div class="matchup">
 	<div class="matchup-details">
-		<div ng-controller="weatherCtrl" ng-init="manchesterWeather()">
-			<div>
-			  <small>{{ place.location.city }}, England</small>
-			  <h2>Current: {{ place.item.condition.text }} | {{ place.item.condition.temp }}&deg; <img src="http://l.yimg.com/a/i/us/we/52/{{place.item.condition.code}}.gif"/></h2>
-			</div>
+		<div class="matchup-date">
+			<small>22 August 2015 | 07:45 | Old Trafford</small>
 		</div>
-
-		<small>22 August 2015 | 07:45<br>Old Trafford</small>
+		<div ng-controller="weatherCtrl" ng-init="manchesterWeather()" class="matchup-weather">
+			<small>Current Weather: {{ place.item.condition.text }} | {{ place.item.condition.temp }}&deg;</small>
+		</div>
 	</div>
+
 	<div class="matchup-teams">
-		<div class="matchup-team-1">
+		<div class="matchup-team-1 manunited">
 			<img src="images/logos/manchester-united.png" class="matchup-team-logo" ng-click="addPick20('Manchester United');">
 			<h2 class="matchup-team-name">Manchester United</h2>
 		<div class="team-form">
@@ -27,7 +26,7 @@
 			<p>vs.</p>
 			<button class="draw-button" ng-click="addPick20('Draw');">Draw</button>
 		</div>
-		<div class="matchup-team-2">
+		<div class="matchup-team-2 newcastle">
 			<img src="images/logos/newcastle-united.png" class="matchup-team-logo" ng-click="addPick20('Newcastle United');">
 			<h2 class="matchup-team-name">Newcastle United</h2>
 			<div class="team-form">
@@ -42,9 +41,9 @@
 	<div class="matchup-user-picks">
 		<ul>
 			<li ng-repeat="pick in picks | filter: {matchday3: 0}" class="matchup-user-pick">
-				<button class="matchup-delete-pick" ng-click="picks.remove(pick)" ng-show="pick.username==$root.currentUser.username">&times;</button>
 				<span class="matchup-user-name">{{pick.username}}:</span>
 				<span class="matchup-user-selection">{{pick.text}}</span>
+				<span class="matchup-delete-pick" ng-click="picks.remove(pick)" ng-show="pick.username==$root.currentUser.username">Delete</span>
 			</li>
 		</ul>
 	</div>
@@ -52,15 +51,14 @@
 
 <div class="matchup">
 	<div class="matchup-details">
-		<div ng-controller="weatherCtrl" ng-init="londonWeather()">
-			<div>
-			  <small>{{ place.location.city }}, England</small>
-			  <h2>Current: {{ place.item.condition.text }} | {{ place.item.condition.temp }}&deg; <img src="http://l.yimg.com/a/i/us/we/52/{{place.item.condition.code}}.gif"/></h2>
-			</div>
+		<div class="matchup-date">
+			<small>22 August 2015 | 10:00 | Selhurst Park</small>
 		</div>
-
-		<small>22 August 2015 | 10:00<br>Selhurst Park</small>
+		<div ng-controller="weatherCtrl" ng-init="londonWeather()" class="matchup-weather">
+			<small>Current Weather: {{ place.item.condition.text }} | {{ place.item.condition.temp }}&deg;</small>
+		</div>
 	</div>
+
 	<div class="matchup-teams">
 		<div class="matchup-team-1">
 			<img src="images/logos/crystal-palace.png" class="matchup-team-logo" ng-click="addPick21('Crystal Palace');">
@@ -92,9 +90,9 @@
 	<div class="matchup-user-picks">
 		<ul>
 			<li ng-repeat="pick in picks | filter: {matchday3: 1}" class="matchup-user-pick">
-				<button class="matchup-delete-pick" ng-click="picks.remove(pick)" ng-show="pick.username==$root.currentUser.username">&times;</button>
 				<span class="matchup-user-name">{{pick.username}}:</span>
 				<span class="matchup-user-selection">{{pick.text}}</span>
+				<span class="matchup-delete-pick" ng-click="picks.remove(pick)" ng-show="pick.username==$root.currentUser.username">Delete</span>
 			</li>
 		</ul>
 	</div>
@@ -102,14 +100,12 @@
 
 <div class="matchup">
 	<div class="matchup-details">
-		<div ng-controller="weatherCtrl" ng-init="londonWeather()">
-			<div>
-			  <small>{{ place.location.city }}, England</small>
-			  <h2>Current: {{ place.item.condition.text }} | {{ place.item.condition.temp }}&deg; <img src="http://l.yimg.com/a/i/us/we/52/{{place.item.condition.code}}.gif"/></h2>
-			</div>
+		<div class="matchup-date">
+			<small>22 August 2015 | 10:00 | Boleyn Ground</small>
 		</div>
-
-		<small>22 August 2015 | 10:00<br>Boleyn Ground</small>
+		<div ng-controller="weatherCtrl" ng-init="londonWeather()" class="matchup-weather">
+			  <small>Current Weather: {{ place.item.condition.text }} | {{ place.item.condition.temp }}&deg;</small>
+		</div>
 	</div>
 	<div class="matchup-teams">
 		<div class="matchup-team-1">
@@ -142,9 +138,9 @@
 	<div class="matchup-user-picks">
 		<ul>
 			<li ng-repeat="pick in picks | filter: {matchday3: 2}" class="matchup-user-pick">
-				<button class="matchup-delete-pick" ng-click="picks.remove(pick)" ng-show="pick.username==$root.currentUser.username">&times;</button>
 				<span class="matchup-user-name">{{pick.username}}:</span>
 				<span class="matchup-user-selection">{{pick.text}}</span>
+				<span class="matchup-delete-pick" ng-click="picks.remove(pick)" ng-show="pick.username==$root.currentUser.username">Delete</span>
 			</li>
 		</ul>
 	</div>
@@ -152,14 +148,12 @@
 
 <div class="matchup">
 	<div class="matchup-details">
-		<div ng-controller="weatherCtrl" ng-init="norwichCityWeather()">
-			<div>
-			  <small>{{ place.location.city }}, England</small>
-			  <h2>Current: {{ place.item.condition.text }} | {{ place.item.condition.temp }}&deg; <img src="http://l.yimg.com/a/i/us/we/52/{{place.item.condition.code}}.gif"/></h2>
-			</div>
+		<div class="matchup-date">
+			<small>22 August 2015 | 10:00 | Carrow Road</small>
 		</div>
-
-		<small>22 August 2015 | 10:00<br>Carrow Road</small>
+		<div ng-controller="weatherCtrl" ng-init="norwichCityWeather()" class="matchup-weather">
+			<small>Current Weather: {{ place.item.condition.text }} | {{ place.item.condition.temp }}&deg;</small>
+		</div>
 	</div>
 	<div class="matchup-teams">
 		<div class="matchup-team-1">
@@ -192,7 +186,7 @@
 	<div class="matchup-user-picks">
 		<ul>
 			<li ng-repeat="pick in picks | filter: {matchday3: 3}" class="matchup-user-pick">
-				<button class="matchup-delete-pick" ng-click="picks.remove(pick)" ng-show="pick.username==$root.currentUser.username">&times;</button>
+				<span class="matchup-delete-pick" ng-click="picks.remove(pick)" ng-show="pick.username==$root.currentUser.username">Delete</span>
 				<span class="matchup-user-name">{{pick.username}}:</span>
 				<span class="matchup-user-selection">{{pick.text}}</span>
 			</li>
@@ -202,14 +196,12 @@
 
 <div class="matchup">
 	<div class="matchup-details">
-		<div ng-controller="weatherCtrl" ng-init="sunderlandWeather()">
-			<div>
-			  <small>{{ place.location.city }}, England</small>
-			  <h2>Current: {{ place.item.condition.text }} | {{ place.item.condition.temp }}&deg; <img src="http://l.yimg.com/a/i/us/we/52/{{place.item.condition.code}}.gif"/></h2>
-			</div>
+		<div class="matchup-date">
+			<small>22 August 2015 | 10:00 | Stadium of Light</small>
 		</div>
-
-		<small>22 August 2015 | 10:00<br>Stadium of Light</small>
+		<div ng-controller="weatherCtrl" ng-init="sunderlandWeather()" class="matchup-weather">
+			<small>Current Weather: {{ place.item.condition.text }} | {{ place.item.condition.temp }}&deg;</small>
+		</div>
 	</div>
 	<div class="matchup-teams">
 		<div class="matchup-team-1">
@@ -242,7 +234,7 @@
 	<div class="matchup-user-picks">
 		<ul>
 			<li ng-repeat="pick in picks | filter: {matchday3: 4}" class="matchup-user-pick">
-				<button class="matchup-delete-pick" ng-click="picks.remove(pick)" ng-show="pick.username==$root.currentUser.username">&times;</button>
+				<span class="matchup-delete-pick" ng-click="picks.remove(pick)" ng-show="pick.username==$root.currentUser.username">Delete</span>
 				<span class="matchup-user-name">{{pick.username}}:</span>
 				<span class="matchup-user-selection">{{pick.text}}</span>
 			</li>
@@ -252,14 +244,13 @@
 
 <div class="matchup">
 	<div class="matchup-details">
-		<div ng-controller="weatherCtrl" ng-init="leicesterCityWeather()">
-			<div>
-			  <small>{{ place.location.city }}, England</small>
-			  <h2>Current: {{ place.item.condition.text }} | {{ place.item.condition.temp }}&deg; <img src="http://l.yimg.com/a/i/us/we/52/{{place.item.condition.code}}.gif"/></h2>
-			</div>
+		<div class="matchup-date">
+			<small>22 August 2015 | 10:00 | King Power Stadium</small>
+		</div>
+		<div ng-controller="weatherCtrl" ng-init="leicesterCityWeather()" class="matchup-weather">
+			<small>Current Weather: {{ place.item.condition.text }} | {{ place.item.condition.temp }}&deg;</small>
 		</div>
 
-		<small>22 August 2015 | 10:00<br>King Power Stadium</small>
 	</div>
 	<div class="matchup-teams">
 		<div class="matchup-team-1">
@@ -292,7 +283,7 @@
 	<div class="matchup-user-picks">
 		<ul>
 			<li ng-repeat="pick in picks | filter: {matchday3: 5}" class="matchup-user-pick">
-				<button class="matchup-delete-pick" ng-click="picks.remove(pick)" ng-show="pick.username==$root.currentUser.username">&times;</button>
+				<span class="matchup-delete-pick" ng-click="picks.remove(pick)" ng-show="pick.username==$root.currentUser.username">Delete</span>
 				<span class="matchup-user-name">{{pick.username}}:</span>
 				<span class="matchup-user-selection">{{pick.text}}</span>
 			</li>
@@ -302,14 +293,13 @@
 
 <div class="matchup">
 	<div class="matchup-details">
-		<div ng-controller="weatherCtrl" ng-init="westBromWeather()">
-			<div>
-			  <small>{{ place.location.city }}, England</small>
-			  <h2>Current: {{ place.item.condition.text }} | {{ place.item.condition.temp }}&deg; <img src="http://l.yimg.com/a/i/us/we/52/{{place.item.condition.code}}.gif"/></h2>
-			</div>
+		<div class="matchup-date">
+			<small>23 August 2015 | 08:30 | The Hawthorns</small>
+		</div>
+		<div ng-controller="weatherCtrl" ng-init="westBromWeather()" class="matchup-weather">
+			<small>Current Weather: {{ place.item.condition.text }} | {{ place.item.condition.temp }}&deg;</small>
 		</div>
 
-		<small>23 August 2015 | 08:30<br>The Hawthorns</small>
 	</div>
 	<div class="matchup-teams">
 		<div class="matchup-team-1">
@@ -342,7 +332,7 @@
 	<div class="matchup-user-picks">
 		<ul>
 			<li ng-repeat="pick in picks | filter: {matchday3: 6}" class="matchup-user-pick">
-				<button class="matchup-delete-pick" ng-click="picks.remove(pick)" ng-show="pick.username==$root.currentUser.username">&times;</button>
+				<span class="matchup-delete-pick" ng-click="picks.remove(pick)" ng-show="pick.username==$root.currentUser.username">Delete</span>
 				<span class="matchup-user-name">{{pick.username}}:</span>
 				<span class="matchup-user-selection">{{pick.text}}</span>
 			</li>
@@ -352,14 +342,13 @@
 
 <div class="matchup">
 	<div class="matchup-details">
-		<div ng-controller="weatherCtrl" ng-init="liverpoolWeather()">
-			<div>
-			  <small>{{ place.location.city }}, England</small>
-			  <h2>Current: {{ place.item.condition.text }} | {{ place.item.condition.temp }}&deg; <img src="http://l.yimg.com/a/i/us/we/52/{{place.item.condition.code}}.gif"/></h2>
-			</div>
+		<div class="matchup-date">
+			<small>23 August 2015 | 11:00 | Goodison Park</small>
+		</div>
+		<div ng-controller="weatherCtrl" ng-init="liverpoolWeather()" class="matchup-date">
+			<small>Current Weather: {{ place.item.condition.text }} | {{ place.item.condition.temp }}&deg;</small>
 		</div>
 
-		<small>23 August 2015 | 11:00<br>Goodison Park</small>
 	</div>
 	<div class="matchup-teams">
 		<div class="matchup-team-1">
@@ -392,7 +381,7 @@
 	<div class="matchup-user-picks">
 		<ul>
 			<li ng-repeat="pick in picks | filter: {matchday3: 7}" class="matchup-user-pick">
-				<button class="matchup-delete-pick" ng-click="picks.remove(pick)" ng-show="pick.username==$root.currentUser.username">&times;</button>
+				<span class="matchup-delete-pick" ng-click="picks.remove(pick)" ng-show="pick.username==$root.currentUser.username">Delete</span>
 				<span class="matchup-user-name">{{pick.username}}:</span>
 				<span class="matchup-user-selection">{{pick.text}}</span>
 			</li>
@@ -402,15 +391,14 @@
 
 <div class="matchup">
 	<div class="matchup-details">
-		<div ng-controller="weatherCtrl" ng-init="watfordWeather()">
-			<div>
-			  <small>{{ place.location.city }}, England</small>
-			  <h2>Current: {{ place.item.condition.text }} | {{ place.item.condition.temp }}&deg; <img src="http://l.yimg.com/a/i/us/we/52/{{place.item.condition.code}}.gif"/></h2>
-			</div>
+		<div class="matchup-date">
+			<small>23 August 2015 | 11:00 | Vicarage Road</small>
 		</div>
-
-		<small>23 August 2015 | 11:00<br>Vicarage Road</small>
+		<div ng-controller="weatherCtrl" ng-init="watfordWeather()" class="matchup-weather">
+			<small>Current Weather: {{ place.item.condition.text }} | {{ place.item.condition.temp }}&deg;</small>
+		</div>
 	</div>
+
 	<div class="matchup-teams">
 		<div class="matchup-team-1">
 			<img src="images/logos/watford.png" class="matchup-team-logo" ng-click="addPick28('Watford');">
@@ -442,7 +430,7 @@
 	<div class="matchup-user-picks">
 		<ul>
 			<li ng-repeat="pick in picks | filter: {matchday3: 8}" class="matchup-user-pick">
-				<button class="matchup-delete-pick" ng-click="picks.remove(pick)" ng-show="pick.username==$root.currentUser.username">&times;</button>
+				<span class="matchup-delete-pick" ng-click="picks.remove(pick)" ng-show="pick.username==$root.currentUser.username">Delete</span>
 				<span class="matchup-user-name">{{pick.username}}:</span>
 				<span class="matchup-user-selection">{{pick.text}}</span>
 			</li>
@@ -452,14 +440,13 @@
 
 <div class="matchup">
 	<div class="matchup-details">
-		<div ng-controller="weatherCtrl" ng-init="londonWeather()">
-			<div>
-			  <small>{{ place.location.city }}, England</small>
-			  <h2>Current: {{ place.item.condition.text }} | {{ place.item.condition.temp }}&deg; <img src="http://l.yimg.com/a/i/us/we/52/{{place.item.condition.code}}.gif"/></h2>
-			</div>
+		<div class="matchup-date">
+			<small>24 August 2015 | 15:00 | Emirates Stadium</small>
+		</div>
+		<div ng-controller="weatherCtrl" ng-init="londonWeather()" class="matchup-weather">
+			<small>Current Weather: {{ place.item.condition.text }} | {{ place.item.condition.temp }}&deg;</small>
 		</div>
 
-		<small>24 August 2015 | 15:00<br>Emirates Stadium</small>
 	</div>
 	<div class="matchup-teams">
 		<div class="matchup-team-1">
@@ -492,7 +479,7 @@
 	<div class="matchup-user-picks">
 		<ul>
 			<li ng-repeat="pick in picks | filter: {matchday3: 9}" class="matchup-user-pick">
-				<button class="matchup-delete-pick" ng-click="picks.remove(pick)" ng-show="pick.username==$root.currentUser.username">&times;</button>
+				<span class="matchup-delete-pick" ng-click="picks.remove(pick)" ng-show="pick.username==$root.currentUser.username">Delete</span>
 				<span class="matchup-user-name">{{pick.username}}:</span>
 				<span class="matchup-user-selection">{{pick.text}}</span>
 			</li>
