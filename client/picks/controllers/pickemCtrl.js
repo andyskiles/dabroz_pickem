@@ -315,4 +315,104 @@ angular.module('pickem')
         );
       };
 
+      $scope.addPick30 = function(newPick) {
+        $scope.picks.push( {
+          text: newPick,
+          createdAt: new Date(),
+          matchday4: 0,
+          owner: Meteor.userId(),
+          username: Meteor.user().username }
+        );
+      };
+
+      $scope.addPick31 = function(newPick) {
+        $scope.picks.push( {
+          text: newPick,
+          createdAt: new Date(),
+          matchday4: 1,
+          owner: Meteor.userId(),
+          username: Meteor.user().username }
+        );
+      };
+
+      $scope.addPick32 = function(newPick) {
+        $scope.picks.push( {
+          text: newPick,
+          createdAt: new Date(),
+          matchday4: 2,
+          owner: Meteor.userId(),
+          username: Meteor.user().username }
+        );
+      };
+
+      $scope.addPick33 = function(newPick) {
+        $scope.picks.push( {
+          text: newPick,
+          createdAt: new Date(),
+          matchday4: 3,
+          owner: Meteor.userId(),
+          username: Meteor.user().username }
+        );
+      };
+
+      $scope.addPick34 = function(newPick) {
+        $scope.picks.push( {
+          text: newPick,
+          createdAt: new Date(),
+          matchday4: 4,
+          owner: Meteor.userId(),
+          username: Meteor.user().username }
+        );
+      };
+
+      $scope.addPick35 = function(newPick) {
+        $scope.picks.push( {
+          text: newPick,
+          createdAt: new Date(),
+          matchday4: 5,
+          owner: Meteor.userId(),
+          username: Meteor.user().username }
+        );
+      };
+
+      $scope.addPick36 = function(newPick) {
+        $scope.picks.push( {
+          text: newPick,
+          createdAt: new Date(),
+          matchday4: 6,
+          owner: Meteor.userId(),
+          username: Meteor.user().username }
+        );
+      };
+
+      $scope.addPick37 = function(newPick) {
+        $scope.picks.push( {
+          text: newPick,
+          createdAt: new Date(),
+          matchday4: 7,
+          owner: Meteor.userId(),
+          username: Meteor.user().username }
+        );
+      };
+
+      $scope.addPick38 = function(newPick) {
+        $scope.picks.push( {
+          text: newPick,
+          createdAt: new Date(),
+          matchday4: 8,
+          owner: Meteor.userId(),
+          username: Meteor.user().username }
+        );
+      };
+
+      $scope.addPick39 = function(newPick) {
+        $scope.picks.push( {
+          text: newPick,
+          createdAt: new Date(),
+          matchday4: 9,
+          owner: Meteor.userId(),
+          username: Meteor.user().username }
+        );
+      };
+
 }]);
