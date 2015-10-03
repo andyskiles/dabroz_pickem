@@ -46,6 +46,12 @@ angular.module('pickem').config(['$urlRouterProvider', '$stateProvider', '$locat
         controller: 'PickemCtrl'
       })
 
+      .state('matchday8', {
+        url:'/matchday8',
+        templateUrl: 'client/picks/views/matchday-8.ng.html',
+        controller: 'PickemCtrl'
+      })
+
       $urlRouterProvider.otherwise('/matchday-1');
   } 
 
